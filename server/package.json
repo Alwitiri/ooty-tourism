@@ -7,6 +7,7 @@
     "dev": "node server.js",
     "seed": "node seed.js"
   },
+  "engines": { "node": ">=18.0.0" },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.6.0",

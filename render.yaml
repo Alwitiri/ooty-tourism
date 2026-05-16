@@ -4,8 +4,10 @@ services:
     runtime: node
     repo: https://github.com/Alwitiri/ooty-tourism
     plan: free
-    buildCommand: cd client && npm install && npm run build
-    startCommand: cd server && npm install && node server.js
+    region: singapore
+    buildCommand: cd server && npm install && cd ../client && npm install && npm run build
+    startCommand: cd server && node server.js
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
@@ -16,4 +18,4 @@ services:
       - key: JWT_SECRET
         sync: false
       - key: CLIENT_URL
-        value: https://ooty-tourism.onrender.com
+        value: https://ooty-tourism-api.onrender.com
