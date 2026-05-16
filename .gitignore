@@ -1,0 +1,6 @@
+node_modules
+.env
+client/dist
+server/start-test.bat
+*.log
+.DS_Store
